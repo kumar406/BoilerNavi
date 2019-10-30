@@ -1,28 +1,20 @@
 import React from 'react';
-import { View, StatusBar, Text, TextInput, TouchableOpacity } from "react-native";
-import EStyleSheet from 'react-native-extended-stylesheet';
+import { StatusBar, KeyboardAvoidingView } from "react-native";
 
-import { Container, styles } from '../components/Container';
-import { Registration } from '../components/Form';
+import { Container } from '../components/Container';
+import { RegistrationForm } from '../components/Form';
+import { InputWithButton } from '../components/TextInput';
 
-export default class Registration extends React.Component {
+export default class Registration extends Component {
     render () {
         return (
             <Container>
-                <StatusBar translucent={false} barStyle="light-content" />
-                <View style={styles.regform}>
-                    <Text style={styles.header}>Registration</Text>
+                <KeyboardAvoidingView behavior="padding">
+                    <StatusBar translucent={false} barStyle="light-content" />
+                    <RegistrationForm />
+                    <InputWithButton />
 
-                    <TextInput style={styles.textInput} placeholder="Your name"
-                    underlineColorAndroid={'transparent'}/>
-
-                    <TextInput style={styles.textInput} placeholder="Your email"
-                    underlineColorAndroid={'transparent'}/>
-
-                    <TextInput style={styles.textInput} placeholder="Your email"
-                    secureTextEntry={true} underlineColorAndroid={'transparent'}/>
-
-                </View>
+                </KeyboardAvoidingView>
             </Container>
         );
     }
