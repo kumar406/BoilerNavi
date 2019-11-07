@@ -8,12 +8,12 @@ import { InputWithButton } from '../components/TextInput';
 export default class Registration extends Component {
     render () {
         return (
-            <Container>
+            <Container backgroundColor={$primaryGold}>
                 <KeyboardAvoidingView behavior="padding">
                     <StatusBar translucent={false} barStyle="light-content" />
                     <RegistrationForm />
                     <InputWithButton />
-
+                    
                 </KeyboardAvoidingView>
             </Container>
         );
