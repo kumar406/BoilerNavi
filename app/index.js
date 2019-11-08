@@ -1,7 +1,5 @@
 import React from 'react';
-import EStyleSheet from 'react-native-extended-stylesheet';
-
-export default styles;
+import EStyleSheet from 'react-native';
 import Registration from './screens/Registration';
 
 EStyleSheet.build({
@@ -9,5 +7,5 @@ EStyleSheet.build({
   
 });
 
-export default () => <Registration />;
+export default <Registration />;
 
