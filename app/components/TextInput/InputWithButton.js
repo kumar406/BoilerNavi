@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types';
+import PropTypes from 'react';
 import React from 'react';
 import {
   View, TextInput, TouchableHighlight, Text,
